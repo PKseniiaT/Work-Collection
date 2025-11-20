@@ -22,6 +22,10 @@
 https://github.com/PKseniiaT/Test-Case-Effective-Mobile/blob/main/Shop%20Plus%20API.postman_collection.json
 
 2) Sequence
+https://github.com/PKseniiaT/Test-Case-Effective-Mobile/blob/main/Sequence%20Effective%20Mobile.drawio%20(1).png
+
+# Алгоритмическое мышление
+
 
 
 
