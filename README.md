@@ -26,7 +26,7 @@ https://github.com/PKseniiaT/Test-Case-Effective-Mobile/blob/main/Sequence%20Eff
 
 # Алгоритмическое мышление
 
-
+https://github.com/PKseniiaT/Test-Case-Effective-Mobile/blob/main/BPMN%20Effective%20Mobile.drawio.png
 
 
 
