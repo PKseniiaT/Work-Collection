@@ -13,7 +13,7 @@
 10) 4
 
 # Базы данных-ERD
-ERD Effective Mobile.drawio (2).png
+[ERD Effective Mobile.drawio (2).png](https://github.com/PKseniiaT/Test-Case-Effective-Mobile/blob/main/ERD%20Effective%20Mobile.drawio%20(2).png)
 
 
 
