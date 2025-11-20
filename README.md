@@ -13,6 +13,11 @@
 10) 4
 
 # Базы данных-ERD
+ERD Effective Mobile.drawio (2).png
+
+# Интеграции
+
+
 
 
 
