@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "b60b4a9f-8cd4-46cd-ade5-158cf849569c",
+		"name": "Shop Plus API",
+		"description": "API для управления каталогом интернет-магазина",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47120093",
+		"_collection_link": "https://binonto-6044859.postman.co/workspace/API-Otium-~a2badf2c-4a62-46d1-a16e-9e34482d29f3/collection/47120093-b60b4a9f-8cd4-46cd-ade5-158cf849569c?action=share&source=collection_link&creator=47120093"
+	},
+	"item": [
+		{
+			"name": "Витрина товаров",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/catalog/itemslist?page=1&limit=20",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"catalog",
+						"itemslist"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "номер страницы"
+						},
+						{
+							"key": "limit",
+							"value": "20",
+							"description": "количество товаров на странице"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Детали товара",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/catalog/items/{article}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"catalog",
+						"items",
+						"{article}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление товара в корзину",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "##REQUEST BODY\r\n{\r\n  \"article\": \"JM-Y-1\",\r\n  \"quantity\": 1,\r\n  \"selected_options\": {\r\n    \"color\": \"yellow\",\r\n    \"size\": \"onesize\"\r\n  }\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/basket/items",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"basket",
+						"items"
+					]
+				},
+				"description": "Тело запроса и пример ответа для добавления товара в корзину"
+			},
+			"response": []
+		}
+	]
+}
