@@ -1,6 +1,6 @@
 
 
-# Diagrams
+# There are various artefacts and my works here
 1) ERD
 (https://github.com/PKseniiaT/Test-Case-Effective-Mobile/blob/main/ERD%20Effective%20Mobile.drawio%20(2).png)
 
