@@ -1,0 +1,136 @@
+//список товаров
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "article": "S-W-03",
+        "name": "Носки женские 3 пары",
+        "short_description": "3 пары женских голубых носков премиального качества",
+        "price": 200.00,
+        "color": "blue",
+        "rating": 4.8,
+        "review_count": 142,
+        "image_url": "/images/items/swblue-.jpg",
+        "in_stock": true,
+        "is_new": true,
+        "category": {
+          "id": "1",
+          "name": "Одежда"
+        }
+      },
+      {
+        "article": "JM-Y-1",
+        "name": "Куртка мужская",
+        "short_description": "Современная мужская куртка оверсайз",
+        "price": 12990.00,
+        "rating": 4.9,
+        "review_count": 89,
+        "image_url": "/images/items/jaket-yel.jpg",
+        "in_stock": true,
+        "is_new": false,
+        "category": {
+          "id": "2",
+          "name": "Верхняя одежда"
+        }
+      }
+    ],
+    "pagination": {
+      "current_page": 1,
+      "total_pages": 2,
+      "total_products": 12,
+      "has_next": true,
+      "has_prev": false
+    },
+    "filters": {
+      "categories": [
+        {"id": "1", "name": "Одежда", "count": 5},
+        {"id": "2", "name": "Верхняя одежда", "count": 6},
+        {"id": "3", "name": "Аксессуары", "count": 1}
+      ]
+    }
+  }
+}
+
+
+
+
+
+
+//детали товара
+{
+  "success": true,
+  "data": {
+    "item": {
+        "article": "JM-Y-1",
+        "name": "Куртка мужская",
+        "full_description": "Современная зимняя мужская куртка оверсайз.Изготовлена из итальянской ткани с водонепроницаемым покрытием.Прекрасно подойдет для активного отдыха....",
+        "price": 12990.00,
+        "rating": 4.9,
+        "review_count": 89,
+        "imageы": [
+        "/images/items/jaket-yel-1.jpg",
+        "/images/items/jaket-yel-2.jpg",
+        "/images/items/jaket-yel-3.jpg"
+        ],
+        "in_stock": true,
+        "characteristics" : {
+            "size" : "onesize",
+            "color" : "желтый",
+            "material" : "полиэстер"
+            "temperature" : "до -35 градусов"
+            "manufacturer" : "Moncler, Италия"
+        },
+        "category" : {
+            "id": 2,
+            "name": "Верхняя одежда",
+        }
+       "delivery_options" : ["today", "standart", "express"] 
+       }
+      }
+    ],
+    
+    
+  }
+
+
+//добавление товара в корзину
+POST {{baseUrl}}/basket/items/add
+
+REQUEST BODY
+{
+  "article": "JM-Y-1",
+  "quantity": 1,
+  "selected_options": {
+    "color": "yellow",
+    "size": "onesize"
+  }
+}
+
+RESPONSE
+
+{
+  "success": true,
+  "data": {
+    "basket_item": {
+      "id": "basket_item_789",
+      "article": "JM-Y-1",
+      "item_name": "Куртка мужская",
+      "item_image": "/images/products/s24-black.jpg",
+      "quantity": 1,
+      "price": 89990.00,
+      "selected_options": {
+        "color": "black",
+        "storage": "256gb"
+      },
+      "total_price": 12990.00
+    },
+    "basket_summary": {
+      "total_items": 1,
+      "total_quantity": 1,
+      "subtotal": 12990.00,
+      "discount": 10.00,
+      "total": 12980.00
+    }
+  }
+}
